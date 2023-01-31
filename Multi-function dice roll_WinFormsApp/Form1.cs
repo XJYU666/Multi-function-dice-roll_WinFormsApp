@@ -61,5 +61,10 @@ namespace Multi_function_dice_roll_WinFormsApp
         {
 
         }
+
+        private void radioButtonSw2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
