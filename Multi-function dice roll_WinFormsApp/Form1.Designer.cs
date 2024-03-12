@@ -28,214 +28,368 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.BackTest1_1 = new System.Windows.Forms.Label();
-            this.BackTest1_2 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.radioButtonSw1 = new System.Windows.Forms.RadioButton();
-            this.radioButtonSw2 = new System.Windows.Forms.RadioButton();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.BackTest1_3 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            progressBar1 = new ProgressBar();
+            textForUserBox1_2 = new TextBox();
+            textForUserBox1_1 = new TextBox();
+            useString = new CheckBox();
+            button1 = new Button();
+            textBoxOut = new TextBox();
+            Run = new Button();
+            backText1_1 = new Label();
+            backText1_2 = new Label();
+            noRound = new CheckBox();
+            label1 = new Label();
+            radioButtonSw1 = new RadioButton();
+            radioButtonSw2 = new RadioButton();
+            textForUserBox3_1 = new TextBox();
+            backText3_0 = new Label();
+            groupBoxOptions = new GroupBox();
+            groupBoxFastM = new GroupBox();
+            textBoxSwap = new TextBox();
+            labelFastM = new Label();
+            checkBoxFastM = new CheckBox();
+            backText2_1 = new Label();
+            backText2_2 = new Label();
+            textForUserBox2_1 = new TextBox();
+            textForUserBox2_2 = new TextBox();
+            backText2_3 = new Label();
+            textForUserBox2_12 = new TextBox();
+            groupBoxOptions.SuspendLayout();
+            groupBoxFastM.SuspendLayout();
+            SuspendLayout();
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 294);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(293, 26);
-            this.progressBar1.TabIndex = 0;
+            progressBar1.Location = new Point(12, 310);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(293, 26);
+            progressBar1.TabIndex = 0;
             // 
-            // textBox1
+            // textForUserBox1_2
             // 
-            this.textBox1.Location = new System.Drawing.Point(82, 68);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(110, 23);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            textForUserBox1_2.Location = new Point(82, 71);
+            textForUserBox1_2.Name = "textForUserBox1_2";
+            textForUserBox1_2.Size = new Size(110, 23);
+            textForUserBox1_2.TabIndex = 1;
+            textForUserBox1_2.Text = "1";
+            textForUserBox1_2.TextChanged += textBox1_TextChanged;
             // 
-            // textBox2
+            // textForUserBox1_1
             // 
-            this.textBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox2.Location = new System.Drawing.Point(82, 39);
-            this.textBox2.MaxLength = 10;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(110, 23);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            textForUserBox1_1.Cursor = Cursors.IBeam;
+            textForUserBox1_1.Location = new Point(82, 39);
+            textForUserBox1_1.MaxLength = 10;
+            textForUserBox1_1.Name = "textForUserBox1_1";
+            textForUserBox1_1.Size = new Size(110, 23);
+            textForUserBox1_1.TabIndex = 2;
+            textForUserBox1_1.Text = "1";
+            textForUserBox1_1.TextChanged += textBox2_TextChanged;
             // 
-            // checkBox1
+            // useString
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(203, 41);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(89, 21);
-            this.checkBox1.TabIndex = 3;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            useString.AutoSize = true;
+            useString.Checked = true;
+            useString.CheckState = CheckState.Checked;
+            useString.Enabled = false;
+            useString.Location = new Point(6, 49);
+            useString.Name = "useString";
+            useString.Size = new Size(87, 21);
+            useString.TabIndex = 3;
+            useString.Text = "输出纯字符";
+            useString.UseVisualStyleBackColor = true;
+            useString.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(281, 326);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(24, 112);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Location = new Point(281, 342);
+            button1.Name = "button1";
+            button1.Size = new Size(24, 112);
+            button1.TabIndex = 4;
+            button1.Text = "复\r\n制";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // textBox3
+            // textBoxOut
             // 
-            this.textBox3.Location = new System.Drawing.Point(45, 326);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(230, 112);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            textBoxOut.Location = new Point(45, 342);
+            textBoxOut.Multiline = true;
+            textBoxOut.Name = "textBoxOut";
+            textBoxOut.Size = new Size(230, 112);
+            textBoxOut.TabIndex = 6;
+            textBoxOut.TextChanged += textBox3_TextChanged;
             // 
-            // button2
+            // Run
             // 
-            this.button2.Location = new System.Drawing.Point(12, 260);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(293, 28);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            Run.Location = new Point(12, 276);
+            Run.Name = "Run";
+            Run.Size = new Size(293, 28);
+            Run.TabIndex = 8;
+            Run.Text = "Run";
+            Run.UseVisualStyleBackColor = true;
+            Run.Click += Run_Click;
             // 
-            // BackTest1_1
+            // backText1_1
             // 
-            this.BackTest1_1.AutoSize = true;
-            this.BackTest1_1.Location = new System.Drawing.Point(32, 42);
-            this.BackTest1_1.Name = "BackTest1_1";
-            this.BackTest1_1.Size = new System.Drawing.Size(35, 17);
-            this.BackTest1_1.TabIndex = 9;
-            this.BackTest1_1.Text = "面数:";
-            this.BackTest1_1.Click += new System.EventHandler(this.label1_Click);
+            backText1_1.AutoSize = true;
+            backText1_1.Location = new Point(32, 42);
+            backText1_1.Name = "backText1_1";
+            backText1_1.Size = new Size(35, 17);
+            backText1_1.TabIndex = 9;
+            backText1_1.Text = "面数:";
+            backText1_1.Click += label1_Click;
             // 
-            // BackTest1_2
+            // backText1_2
             // 
-            this.BackTest1_2.AutoSize = true;
-            this.BackTest1_2.Location = new System.Drawing.Point(32, 71);
-            this.BackTest1_2.Name = "BackTest1_2";
-            this.BackTest1_2.Size = new System.Drawing.Size(35, 17);
-            this.BackTest1_2.TabIndex = 10;
-            this.BackTest1_2.Text = "次数:";
-            this.BackTest1_2.Click += new System.EventHandler(this.BackTest1_2_Click);
+            backText1_2.AutoSize = true;
+            backText1_2.Location = new Point(32, 71);
+            backText1_2.Name = "backText1_2";
+            backText1_2.Size = new Size(35, 17);
+            backText1_2.TabIndex = 10;
+            backText1_2.Text = "次数:";
+            backText1_2.Click += BackTest1_2_Click;
             // 
-            // checkBox2
+            // noRound
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(203, 71);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(89, 21);
-            this.checkBox2.TabIndex = 11;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            noRound.AutoSize = true;
+            noRound.Location = new Point(6, 22);
+            noRound.Name = "noRound";
+            noRound.Size = new Size(87, 21);
+            noRound.TabIndex = 11;
+            noRound.Text = "去除重复项";
+            noRound.UseVisualStyleBackColor = true;
+            noRound.CheckedChanged += checkBox2_CheckedChanged;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 374);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 17);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "label1";
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 368);
+            label1.Name = "label1";
+            label1.Size = new Size(20, 68);
+            label1.TabIndex = 16;
+            label1.Text = "输\r\n出\r\n结\r\n果";
+            label1.Click += label1_Click_1;
             // 
             // radioButtonSw1
             // 
-            this.radioButtonSw1.AutoSize = true;
-            this.radioButtonSw1.Checked = true;
-            this.radioButtonSw1.Location = new System.Drawing.Point(12, 12);
-            this.radioButtonSw1.Name = "radioButtonSw1";
-            this.radioButtonSw1.Size = new System.Drawing.Size(102, 21);
-            this.radioButtonSw1.TabIndex = 17;
-            this.radioButtonSw1.TabStop = true;
-            this.radioButtonSw1.Text = "radioButton1";
-            this.radioButtonSw1.UseVisualStyleBackColor = true;
-            this.radioButtonSw1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            radioButtonSw1.AutoSize = true;
+            radioButtonSw1.Checked = true;
+            radioButtonSw1.Location = new Point(12, 12);
+            radioButtonSw1.Name = "radioButtonSw1";
+            radioButtonSw1.Size = new Size(74, 21);
+            radioButtonSw1.TabIndex = 17;
+            radioButtonSw1.TabStop = true;
+            radioButtonSw1.Text = "骰子模式";
+            radioButtonSw1.UseVisualStyleBackColor = true;
+            radioButtonSw1.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // radioButtonSw2
             // 
-            this.radioButtonSw2.AutoSize = true;
-            this.radioButtonSw2.Location = new System.Drawing.Point(12, 126);
-            this.radioButtonSw2.Name = "radioButtonSw2";
-            this.radioButtonSw2.Size = new System.Drawing.Size(102, 21);
-            this.radioButtonSw2.TabIndex = 18;
-            this.radioButtonSw2.Text = "radioButton2";
-            this.radioButtonSw2.UseVisualStyleBackColor = true;
-            this.radioButtonSw2.CheckedChanged += new System.EventHandler(this.radioButtonSw2_CheckedChanged);
+            radioButtonSw2.AutoSize = true;
+            radioButtonSw2.Location = new Point(12, 100);
+            radioButtonSw2.Name = "radioButtonSw2";
+            radioButtonSw2.Size = new Size(100, 21);
+            radioButtonSw2.TabIndex = 18;
+            radioButtonSw2.Text = "random 模式";
+            radioButtonSw2.UseVisualStyleBackColor = true;
+            radioButtonSw2.CheckedChanged += radioButtonSw2_CheckedChanged;
             // 
-            // textBox4
+            // textForUserBox3_1
             // 
-            this.textBox4.Location = new System.Drawing.Point(82, 97);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(110, 23);
-            this.textBox4.TabIndex = 19;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged_1);
+            textForUserBox3_1.Location = new Point(82, 199);
+            textForUserBox3_1.Name = "textForUserBox3_1";
+            textForUserBox3_1.Size = new Size(110, 23);
+            textForUserBox3_1.TabIndex = 19;
+            textForUserBox3_1.Text = ",";
+            textForUserBox3_1.TextChanged += textBox4_TextChanged_1;
             // 
-            // BackTest1_3
+            // backText3_0
             // 
-            this.BackTest1_3.AutoSize = true;
-            this.BackTest1_3.Location = new System.Drawing.Point(32, 100);
-            this.BackTest1_3.Name = "BackTest1_3";
-            this.BackTest1_3.Size = new System.Drawing.Size(47, 17);
-            this.BackTest1_3.TabIndex = 20;
-            this.BackTest1_3.Text = "分隔符:";
-            this.BackTest1_3.Click += new System.EventHandler(this.label2_Click);
+            backText3_0.AutoSize = true;
+            backText3_0.Location = new Point(32, 202);
+            backText3_0.Name = "backText3_0";
+            backText3_0.Size = new Size(47, 17);
+            backText3_0.TabIndex = 20;
+            backText3_0.Text = "分隔符:";
+            backText3_0.Click += label2_Click;
+            // 
+            // groupBoxOptions
+            // 
+            groupBoxOptions.Controls.Add(noRound);
+            groupBoxOptions.Controls.Add(useString);
+            groupBoxOptions.Location = new Point(198, 12);
+            groupBoxOptions.Name = "groupBoxOptions";
+            groupBoxOptions.Size = new Size(107, 210);
+            groupBoxOptions.TabIndex = 21;
+            groupBoxOptions.TabStop = false;
+            groupBoxOptions.Text = "More Options";
+            // 
+            // groupBoxFastM
+            // 
+            groupBoxFastM.Controls.Add(textBoxSwap);
+            groupBoxFastM.Controls.Add(labelFastM);
+            groupBoxFastM.Controls.Add(checkBoxFastM);
+            groupBoxFastM.Location = new Point(12, 228);
+            groupBoxFastM.Name = "groupBoxFastM";
+            groupBoxFastM.Size = new Size(293, 42);
+            groupBoxFastM.TabIndex = 22;
+            groupBoxFastM.TabStop = false;
+            groupBoxFastM.Text = "快速模式";
+            // 
+            // textBoxSwap
+            // 
+            textBoxSwap.Enabled = false;
+            textBoxSwap.Location = new Point(186, 13);
+            textBoxSwap.Name = "textBoxSwap";
+            textBoxSwap.Size = new Size(101, 23);
+            textBoxSwap.TabIndex = 23;
+            textBoxSwap.TextChanged += textBoxSwap_TextChanged;
+            // 
+            // labelFastM
+            // 
+            labelFastM.AutoSize = true;
+            labelFastM.Enabled = false;
+            labelFastM.Location = new Point(121, 16);
+            labelFastM.Name = "labelFastM";
+            labelFastM.Size = new Size(59, 17);
+            labelFastM.TabIndex = 1;
+            labelFastM.Text = "随机程度:";
+            labelFastM.Click += labelFastM_Click;
+            // 
+            // checkBoxFastM
+            // 
+            checkBoxFastM.AutoSize = true;
+            checkBoxFastM.Location = new Point(6, 15);
+            checkBoxFastM.Name = "checkBoxFastM";
+            checkBoxFastM.Size = new Size(99, 21);
+            checkBoxFastM.TabIndex = 0;
+            checkBoxFastM.Text = "使用快速模式";
+            checkBoxFastM.UseVisualStyleBackColor = true;
+            checkBoxFastM.CheckedChanged += checkBoxFastM_CheckedChanged;
+            // 
+            // backText2_1
+            // 
+            backText2_1.AutoSize = true;
+            backText2_1.Enabled = false;
+            backText2_1.Location = new Point(32, 130);
+            backText2_1.Name = "backText2_1";
+            backText2_1.Size = new Size(35, 17);
+            backText2_1.TabIndex = 23;
+            backText2_1.Text = "范围:";
+            backText2_1.Click += label2_Click_2;
+            // 
+            // backText2_2
+            // 
+            backText2_2.AutoSize = true;
+            backText2_2.Enabled = false;
+            backText2_2.Location = new Point(32, 163);
+            backText2_2.Name = "backText2_2";
+            backText2_2.Size = new Size(35, 17);
+            backText2_2.TabIndex = 24;
+            backText2_2.Text = "个数:";
+            backText2_2.Click += label3_Click;
+            // 
+            // textForUserBox2_1
+            // 
+            textForUserBox2_1.Enabled = false;
+            textForUserBox2_1.Location = new Point(82, 127);
+            textForUserBox2_1.Name = "textForUserBox2_1";
+            textForUserBox2_1.Size = new Size(45, 23);
+            textForUserBox2_1.TabIndex = 25;
+            // 
+            // textForUserBox2_2
+            // 
+            textForUserBox2_2.Enabled = false;
+            textForUserBox2_2.Location = new Point(82, 160);
+            textForUserBox2_2.Name = "textForUserBox2_2";
+            textForUserBox2_2.Size = new Size(110, 23);
+            textForUserBox2_2.TabIndex = 26;
+            textForUserBox2_2.TextChanged += textBox2_TextChanged_1;
+            // 
+            // backText2_3
+            // 
+            backText2_3.AutoSize = true;
+            backText2_3.Enabled = false;
+            backText2_3.Location = new Point(128, 130);
+            backText2_3.Name = "backText2_3";
+            backText2_3.Size = new Size(17, 17);
+            backText2_3.TabIndex = 27;
+            backText2_3.Text = "~";
+            // 
+            // textForUserBox2_12
+            // 
+            textForUserBox2_12.Enabled = false;
+            textForUserBox2_12.Location = new Point(147, 127);
+            textForUserBox2_12.Name = "textForUserBox2_12";
+            textForUserBox2_12.Size = new Size(45, 23);
+            textForUserBox2_12.TabIndex = 28;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(317, 450);
-            this.Controls.Add(this.BackTest1_3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.radioButtonSw2);
-            this.Controls.Add(this.radioButtonSw1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.BackTest1_2);
-            this.Controls.Add(this.BackTest1_1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.progressBar1);
-            this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Name = "Form1";
-            this.Text = "Roll - Made by XJYU";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
+            BackColor = SystemColors.ActiveBorder;
+            ClientSize = new Size(317, 466);
+            Controls.Add(textForUserBox2_12);
+            Controls.Add(backText2_3);
+            Controls.Add(textForUserBox2_2);
+            Controls.Add(textForUserBox2_1);
+            Controls.Add(backText2_2);
+            Controls.Add(backText2_1);
+            Controls.Add(groupBoxFastM);
+            Controls.Add(groupBoxOptions);
+            Controls.Add(backText3_0);
+            Controls.Add(textForUserBox3_1);
+            Controls.Add(radioButtonSw2);
+            Controls.Add(radioButtonSw1);
+            Controls.Add(label1);
+            Controls.Add(backText1_2);
+            Controls.Add(backText1_1);
+            Controls.Add(Run);
+            Controls.Add(textBoxOut);
+            Controls.Add(button1);
+            Controls.Add(textForUserBox1_1);
+            Controls.Add(textForUserBox1_2);
+            Controls.Add(progressBar1);
+            ForeColor = SystemColors.ControlText;
+            Name = "Form1";
+            Text = "Roll - Made by XJYU";
+            Load += Form1_Load;
+            groupBoxOptions.ResumeLayout(false);
+            groupBoxOptions.PerformLayout();
+            groupBoxFastM.ResumeLayout(false);
+            groupBoxFastM.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private ProgressBar progressBar1;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private CheckBox checkBox1;
+        private TextBox textForUserBox1_2;
+        private TextBox textForUserBox1_1;
+        private CheckBox useString;
         private Button button1;
-        private TextBox textBox3;
-        private Button button2;
-        private Label BackTest1_1;
-        private Label BackTest1_2;
-        private CheckBox checkBox2;
+        private TextBox textBoxOut;
+        private Button Run;
+        private Label backText1_1;
+        private Label backText1_2;
+        private CheckBox noRound;
         private Label label1;
         private RadioButton radioButtonSw1;
         private RadioButton radioButtonSw2;
-        private TextBox textBox4;
-        private Label BackTest1_3;
+        private TextBox textForUserBox3_1;
+        private Label backText3_0;
+        private GroupBox groupBoxOptions;
+        private GroupBox groupBoxFastM;
+        private TextBox textBoxSwap;
+        private Label labelFastM;
+        private CheckBox checkBoxFastM;
+        private Label backText2_1;
+        private Label backText2_2;
+        private TextBox textForUserBox2_1;
+        private TextBox textForUserBox2_2;
+        private Label backText2_3;
+        private TextBox textForUserBox2_12;
     }
 }
